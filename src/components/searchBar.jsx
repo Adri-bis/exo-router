@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function SearchBar({data, setData}) {
+export default function SearchBar({ data, setData }) {
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);

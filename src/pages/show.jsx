@@ -1,19 +1,15 @@
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 
-function Show (){
-    const data = useLocation();
-    const navigate = useNavigate();
-    const handleClick = () => {
-        navigate(-1, { state: { data: data.state } });
-      }
+function Show() {
+  const location = useLocation();
 
-    console.log(data.state);
-    const index = data.state.id;
-    return (
-        <>
-            <button type="button" onClick={handleClick}></button>
-            <img src={data.state.hits[index].largeImageURL} alt="" />
-        </>
-    )
+  console.log(location);
+
+  return (
+    <>
+      <button type="button"></button>
+      <img src={location.state.largeImageURL} alt="" />
+    </>
+  );
 }
-export default Show
+export default Show;
