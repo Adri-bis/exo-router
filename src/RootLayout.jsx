@@ -1,7 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 
 export default function RootLayout() {
-
   return (
     <>
       <nav>
@@ -20,7 +19,11 @@ export default function RootLayout() {
           </li>
         </ul>
       </nav>
-      <main> <Outlet /></main>
+
+      <main>
+        {" "}
+        <Outlet />
+      </main>
     </>
   );
 }
